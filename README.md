@@ -2,6 +2,10 @@
 
 An interactive web application that generates personalized travel itineraries using Google's Gemini AI. The application provides detailed travel recommendations including daily itineraries, must-see attractions, accommodation suggestions, and budget estimates.
 
+This application is available in two versions:
+- Flask web application (app.py)
+- Streamlit application (streamlit_app.py)
+
 ## Features
 
 - 🌍 Personalized travel recommendations
@@ -15,8 +19,8 @@ An interactive web application that generates personalized travel itineraries us
 
 ## Technologies Used
 
-- Backend: Python, Flask
-- Frontend: Vue.js, Tailwind CSS
+- Backend: Python, Flask/Streamlit
+- Frontend: Vue.js, Tailwind CSS (Flask version) / Streamlit UI (Streamlit version)
 - AI: Google Gemini API
 
 ## Setup
@@ -38,11 +42,18 @@ GOOGLE_API_KEY=your_api_key_here
 ```
 
 4. Run the application:
+
+For Flask version:
 ```bash
 python app.py
 ```
+Then open your browser and navigate to `http://localhost:5000`
 
-5. Open your browser and navigate to `http://localhost:5000`
+For Streamlit version:
+```bash
+streamlit run streamlit_app.py
+```
+Then open your browser and navigate to `http://localhost:8501`
 
 ## Environment Variables
 
@@ -65,14 +76,15 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
+### Testing the API Key
+
+**Flask Version:**
 You can test the API key by visiting:
 ```
 http://127.0.0.1:5000/test
 ```
 
-This will show you a simple test page where you can click the "Test API Key" button to check if your API key is working. The page will show:
-1. If the API key is working (Success/Error)
-2. The response message from the API
-3. A preview of your API key (first 5 characters)
+This will show you a simple test page where you can click the "Test API Key" button to check if your API key is working.
 
-Would you like me to restart the Flask application so you can test it? 
+**Streamlit Version:**
+The Streamlit app includes API testing functionality in the sidebar.
